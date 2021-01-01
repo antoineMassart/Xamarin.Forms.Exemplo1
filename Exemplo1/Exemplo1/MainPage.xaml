@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:resources="clr-namespace:Exemplo1.Resx"
+             x:Class="Exemplo1.MainPage">
+
+    <StackLayout BackgroundColor="White" Padding="5">
+
+        <Frame BackgroundColor="Gray" Padding="20" >
+            <Label Text="{x:Static resources:AppResources.exno}" HorizontalTextAlignment="Center" TextColor="Black" FontSize="32" FontAttributes="Bold"/>
+        </Frame>
+
+        <Label Text="   Input: " HorizontalTextAlignment="Start" TextColor="Black" FontSize="24" FontAttributes="Bold"/>
+        <ScrollView Padding="25" HeightRequest="50">
+            <Editor x:Name="TextInput" Placeholder="{x:Static resources:AppResources.instxt}" Text="" HorizontalOptions="Fill" FontSize="14" TextColor="Black"/>
+        </ScrollView>
+
+        <Label Text="   Output: " HorizontalTextAlignment="Start" TextColor="Black" FontSize="24" FontAttributes="Bold"/>
+        <ScrollView Padding="25" HeightRequest="100">
+            <Label x:Name="TextOutput" VerticalOptions="Fill" FontSize="14" TextColor="Black"/>
+        </ScrollView>
+
+        <Button VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand"  Clicked="Button_Clicked" Text="OK" BackgroundColor="Gray" TextColor="Black" FontSize="36" FontAttributes="Bold"/>
+
+    </StackLayout>
+
+</ContentPage>
